@@ -1,0 +1,32 @@
+@import "./var_mixins/var_mixins_color.scss";
+@import "./var_mixins/var_mixins_position.scss";
+@import "./var_mixins/var_mixins_medaqueries.scss";
+
+#body-wrep {
+    background-color: $white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 1400px;
+    @include centar;
+
+    .main_cont {
+        @include centar;
+        width: 95%;
+        height: auto;
+
+        .box_list {
+            width: 100%;
+            height: auto;
+            float: right;
+
+            .first_drop {
+                background-color: $box_back;
+                padding: 10px;
+                width: 130px;
+                margin: 10px 15px 15px 0;
+                float: right;
+            }
+        }
+    }
+}

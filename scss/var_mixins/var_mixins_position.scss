@@ -1,0 +1,18 @@
+@mixin centar {
+    @include margLR;
+    display: block;
+  }
+  @mixin flex_centar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @mixin margLR {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @mixin centarXY {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
