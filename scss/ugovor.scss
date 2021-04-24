@@ -14,18 +14,30 @@
         @include centar;
         width: 95%;
         height: auto;
-
+      
         .box_list {
             width: 100%;
             height: auto;
             float: right;
-
-            .first_drop {
+            .drop_wrep {
+                position: relative;
                 background-color: $box_back;
+                border: 1px solid transparent;
+                border-radius: 7px 7px 0 0;
                 padding: 10px;
-                width: 130px;
-                margin: 10px 15px 15px 0;
+                width: fit contetn;
+                margin: 10px 70px 15px 0;
                 float: right;
+                color: $text_gray2;
+                overflow: hidden;
+                &:active,
+                &:focus {
+                    border: 1px solid transparent;
+                }
+                .option_drop{
+                    background-color: $box_back;
+                        
+                }
             }
         }
     }

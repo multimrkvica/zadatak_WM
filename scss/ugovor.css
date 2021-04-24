@@ -24,11 +24,25 @@
   float: right;
 }
 
-#body-wrep .main_cont .box_list .first_drop {
+#body-wrep .main_cont .box_list .drop_wrep {
+  position: relative;
   background-color: #f8f4ec;
+  border: 1px solid transparent;
+  border-radius: 7px 7px 0 0;
   padding: 10px;
-  width: 130px;
-  margin: 10px 15px 15px 0;
+  width: fit contetn;
+  margin: 10px 70px 15px 0;
   float: right;
+  color: #494949;
+  overflow: hidden;
 }
+
+#body-wrep .main_cont .box_list .drop_wrep:active, #body-wrep .main_cont .box_list .drop_wrep:focus {
+  border: 1px solid transparent;
+}
+
+#body-wrep .main_cont .box_list .drop_wrep .option_drop {
+  background-color: #f8f4ec;
+}
+
 /*# sourceMappingURL=ugovor.css.map */
