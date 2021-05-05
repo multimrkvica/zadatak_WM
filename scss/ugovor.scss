@@ -10,50 +10,119 @@
     max-width: 1400px;
     // font-family: Roboto, "Open Sans", sans-serif;
     // font-family: 'Poppins', sans-serif;
-    // @include centar;
+    @include centar;
     font-family: "Lexend", sans-serif;
-
-    .main_cont {
-        @include centar;
-        width: 95%;
-        height: auto;
-
-        .box_list {
-            width: 100%;
-            height: auto;
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+    ////////////////////////////SELECT
+    .header {
+        @include phone_max {
+            @include centar;
+            width: fit-content;
+        }
+        height: 70px;
+        width: 100%;
+        .select-area {
+            @include phone_max {
+                @include centar;
+            }
+            position: relative;
+            background-color: $box_back;
+            border: 1px solid transparent;
+            border-radius: 7px 7px 0 0;
+            margin-bottom: 16px;
+            padding: 10px;
+            width: fit-content;
+            margin: 10px 50px 15px 0;
+            color: $text_gray2;
+            overflow: hidden;
+            font-size: 20px;
             float: right;
-            .drop_wrep {
+            &:after {
+                border-left: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-top: 10px solid $purple;
+                bottom: 0;
+                content: "";
+                height: 0;
+                margin: auto;
+                pointer-events: none;
+                position: absolute;
+                right: 10px;
+                top: 0;
+            }
+
+            .input-select {
                 @include phone_max {
                     @include centar;
                     float: none;
                 }
                 position: relative;
-                background-color: $box_back;
-                border: 1px solid transparent;
-                border-radius: 7px 7px 0 0;
-                padding: 10px;
-                width: fit contetn;
-                margin: 10px 70px 15px 0;
-                float: right;
-                color: $text_gray2;
+                background: transparent;
+                border: none;
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 1.33333;
                 overflow: hidden;
-                font-size: 16px;
+                padding: 5px;
+                color: $text_gray2;
+                width: 100%;
+                cursor: pointer;
                 &:active,
                 &:focus {
-                    border: 1px solid transparent;
-                }
-                .option_drop {
-                    background-color: $box_back;
+                    border: none;
                 }
             }
         }
-        .box_wrap {
+    }
+
+    /////////////////////CONTENT
+    .main-content {
+        @include centar;
+        width: 100%;
+        .current-opt:before,
+        .options:before {
+            transform: translateY(0%);
+        }
+        .opt1,
+        .opt2,
+        .opt3 {
+            // border: 3px solid black;
+            background: $white;
+        }
+
+        .wraper12meseci {
+            @include centar;
+            border: 2px solid red;
+            width: auto;
+            // height: auto;
+            height: 500px;
+        }
+        .wraperBezUg {
+            @include centar;
+            border: 2px solid green;
+            width: auto;
+            // height: auto;
+            height: 500px;
+        }
+        .box_wrap,
+        .box_wrap_12,
+        .box_wrap_bezUG {
             @include centar;
             display: block;
             width: 90%;
             height: auto;
-            margin-top: 80px;
+            margin-top: 40px;
             padding: 20px;
+
+            .wraper24meseca {
+                // border: 2px solid purple;
+                width: auto;
+                height: auto;
+                @include centar;
+            }
             .cont_box {
                 @media only screen and (max-width: 1040px) {
                     @include centar;
@@ -70,6 +139,7 @@
                 @include mikro_phone_max {
                     width: 98%;
                 }
+                // border: 2px solid green;
                 display: inline-block;
                 width: 32%;
                 height: auto;
@@ -85,8 +155,8 @@
                     @include phone_max {
                         width: 70%;
                     }
-                    @include small_phone_max{
-                        width: 90%; 
+                    @include small_phone_max {
+                        width: 90%;
                     }
                     @include centar;
                     display: block;
@@ -120,7 +190,6 @@
                         padding-bottom: 30px;
                     }
                 }
-
                 .sec_1 {
                     @include centar;
                     display: block;
@@ -276,7 +345,7 @@
                         border: none;
                         border-radius: 10px;
                         background-color: $purple;
-                        padding: 15px;
+                        padding: 11px;
                         color: $white;
                         text-align: center;
                         font-size: 17px;
